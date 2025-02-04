@@ -22,6 +22,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
+        //Sanctum::ignoreMigrations();
+
         if (app()->environment('local')) {
             URL::forceScheme('https');
         }
